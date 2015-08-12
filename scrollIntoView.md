@@ -1,5 +1,5 @@
 # 手机软键盘遮挡输入框
-
+```html
 <input type="text" value="" id="content" name="content">
 ```
 ```javascript
