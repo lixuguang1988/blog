@@ -1,6 +1,6 @@
 #
    
-##[手机软键盘遮挡输入框](./手机软键盘遮挡输入框)
+##[手机软键盘遮挡输入框](./scrollIntoView.md)
 ```html
 <input type="text" value="" id="content" name="content">
 ```
