@@ -9,3 +9,12 @@ console.log(parseInt("09"));
 console.log(parseFloat("09"));  
 console.log(Number("09"));  
 ```
+
+IE8(ES3)会把parseInt("09")当成8进制来解析. parseInt("0xf")当成16进制来解析
+ES5中直接parseInt不指定第二个参数是按照10进制来解析的   
+避免上面的问题，指定parseInt的第二个参数
+```javascript
+console.log(parseInt("09", 10));  
+console.log(parseFloat("09"));  
+console.log(Number("09"));  
+```
