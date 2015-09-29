@@ -4,5 +4,8 @@
 ###ie8/ie6/ie7返回
 0, 9, 9
 
-`javascript
-
+```javascript
+console.log(parseInt("09"));  
+console.log(parseFloat("09"));  
+console.log(Number("09"));  
+```
