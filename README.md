@@ -41,6 +41,10 @@ $(document).ready(function(){
 ```
 
 ## [iOS里面对竖拍的图片展示位竖的，Android里面展示位横的](./EXIF.md)
+   
+   
+## [如何解决failed to push some refs to git](http://jingyan.baidu.com/article/f3e34a12a25bc8f5ea65354a.html?st=2&net_type=&bd_page_type=1&os=0&rst=&word=chegji@gmail.com)
+
 
 
 
