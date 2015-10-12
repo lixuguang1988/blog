@@ -40,4 +40,8 @@ $(document).ready(function(){
 });
 ```
 
+## [iOS里面对竖拍的图片展示位竖的，Android里面展示位横的](./EXIF.md)
+
+
+
 
