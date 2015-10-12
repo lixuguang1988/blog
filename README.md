@@ -44,6 +44,11 @@ $(document).ready(function(){
    
    
 ## [如何解决failed to push some refs to git](http://jingyan.baidu.com/article/f3e34a12a25bc8f5ea65354a.html?st=2&net_type=&bd_page_type=1&os=0&rst=&word=chegji@gmail.com)
+ ```javascript
+ //先执行
+ git  pull --rebase origin master
+ //在执行push
+ git push -u origin master
 
 
 
