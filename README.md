@@ -21,3 +21,5 @@ git bash(terminal) 上pull/push的时候每次提交都会显示 Enter passphras
 ## [parseInt("09")ie8(包括以前)返回0](./parseInt-ie8-error.md)
 parseInt("09"), parseFloat("09"), Number("09")  
 IE8的返回值 0, 9, 9
+
+## [touchstart 影响 click 事件](移动端触发touch事件同时触发click事件的相关解决方法)
