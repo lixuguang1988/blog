@@ -23,3 +23,21 @@ parseInt("09"), parseFloat("09"), Number("09")
 IE8的返回值 0, 9, 9
 
 ## [上面div层的touch事件 影响下面div层的click事件](移动端触发touch事件同时触发click事件的相关解决方法)
+
+## window.innerWidth, window.innerHeight 得到屏幕的可用宽度和高度的问题(iOS)
+在页面底部加如下代码
+```javascript
+alert(window.innerWidth + ":::" + window.innerHeight);
+```
+得到宽度和告诉是document的
+```javascript
+window.onload = function(){
+   alert(window.innerWidth + ":::" + window.innerHeight);
+}
+//or
+$(document).ready(function(){
+   alert(window.innerWidth + ":::" + window.innerHeight);
+});
+```
+
+
