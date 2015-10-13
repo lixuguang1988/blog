@@ -43,7 +43,7 @@ $(document).ready(function(){
 ## [iOS里面对竖拍的图片展示位竖的，Android里面展示位横的](./EXIF.md)
 iOS里面自动旋转图片，图片的长度和宽度没有一块更新。
    
-[java](https://github.com/drewnoakes/metadata-extractor)后台读取图片exif的信息,后台旋转图片的方向.   
+[java](https://github.com/drewnoakes/metadata-extractor)后台读取图片exif的信息,后台调整图片的方向.   
 ```html
 [Exif] Orientation - Top, left side (Horizontal / normal) 
 [Exif] Orientation - Right, top side (Rotate 90 cw) 
