@@ -57,7 +57,7 @@ Orientation Rotate只保存默认的旋转，也就是用户自己保存旋转�
  git  pull --rebase origin master
  //在执行push
  git push -u origin master
-
+```
 
 
 
