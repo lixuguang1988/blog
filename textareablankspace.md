@@ -1,4 +1,4 @@
-点击<code>textarea</code>IE6/7，textrea会往下面移.   
+点击<code>textarea</code>IE6/7，<code>textarea</code>会往下面移.   
 删除前后的空白
 
 ```html
