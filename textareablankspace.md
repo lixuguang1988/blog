@@ -1,3 +1,6 @@
+点击<code>textarea</code>IE6/7，textrea会往下面移.   
+删除前后的空白
+
 ```html
 <div class="fd-group">
     <label class="fd-label" for="title">请在此输入标题</label>
@@ -11,6 +14,8 @@
       <textarea class="fd-textarea" name="desc" id="desc"></textarea>
     </div>
 </div>
+<h2>改成</h2>
+<div class="fd-group"><label class="fd-label" for="desc">文稿简介</label><div class="fd-control"><textarea class="fd-textarea" name="desc" id="desc"></textarea></div></div>
 ```
 
 ```css
