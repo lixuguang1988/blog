@@ -11,3 +11,5 @@ document.querySelector("#content").addEventListener("focus", function(){
        }, 200);                   
 }, false);
 ```
+
+webview里面却不支持.
