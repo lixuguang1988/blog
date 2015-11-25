@@ -12,4 +12,4 @@ document.querySelector("#content").addEventListener("focus", function(){
 }, false);
 ```
 
-webview里面却不支持.
+webview里面支持不好
