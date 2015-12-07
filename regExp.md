@@ -26,7 +26,7 @@ a-b中的连字符表示范围
 ```javascript
 var regAbc = /[abc]/;  //匹配字符'a', 'b', 'c'中的任意一个
 var regNotAbc = /[^abc]/; //匹配除字符'a', 'b', 'c'以外的所有的字符
-var regW = /[a-zA-Z0-9]/;匹配a到z, A到Z， 0到9的字符
+var regW = /[a-zA-Z0-9]/;  //匹配a到z, A到Z， 0到9的字符等同于/\w/
 ```
 特殊的字符类  
 *  [...]  匹配...中的任意一个
