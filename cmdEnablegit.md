@@ -1,11 +1,11 @@
-## windowÖĞcmdÖĞÖ§³ÖGitÃüÁî
-###°²×°Git
-1.ÏÂÔØ[Git](http://git-scm.com/download/win)
-2 °²×°
-###ÉèÖÃGitµÄ»·¾³±äÁ¿
-1.¼ÆËã»ú--ÊôĞÔ--¸ß¼¶»·¾³ÉèÖÃ--»·¾³±äÁ¿--ÏµÍ³±äÁ¿
-2.±à¼­pathÔÚÍ·²¿¼ÓÈëE:\Program Files\Git\cmd;
+## windowä¸­cmdä¸­æ”¯æŒGitå‘½ä»¤
+###å®‰è£…Git
+1.ä¸‹è½½[Git](http://git-scm.com/download/win)
+2 å®‰è£…
+###è®¾ç½®Gitçš„ç¯å¢ƒå˜é‡
+1.è®¡ç®—æœº--å±æ€§--é«˜çº§ç¯å¢ƒè®¾ç½®--ç¯å¢ƒå˜é‡--ç³»ç»Ÿå˜é‡
+2.ç¼–è¾‘pathåœ¨å¤´éƒ¨åŠ å…¥E:\Program Files\Git\cmd;
 
-###»òÕßÖ±½ÓÊ¹ÓÃGit CMD »òÕß Git Bash
+###æˆ–è€…ç›´æ¥ä½¿ç”¨Git CMD æˆ–è€… Git Bash
 
 
