@@ -1,0 +1,23 @@
+{  
+  "name": "My First Extension",
+  "version": "1.0",
+  "manifest_version" : 2,
+  "description": "The first extension that I made.",
+  "browser_action": {  
+    "default_icon": "images/icon.png" ,
+    "default_title": "Extension Title",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "http://*/",
+    "https://*/",
+    "tabs", "http://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "css": [],
+      "js": ["myscript.js"]
+    }
+  ]
+} 
