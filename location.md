@@ -8,7 +8,6 @@
 6. pathname
 7. search
 8. hash
-
 *  reload(true)
 *  asign()
 *  replace()
