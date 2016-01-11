@@ -18,20 +18,23 @@
             cwidth = canvas.width,
             cheight = canvas.height,
             dicex = 50, //骰子偏移的距离，及骰子见得距离
-            //dicey = 50,
+            dicey = 50,
             dicewidth = 100, //骰子宽度
             diceheight = 100, //骰子高度
             dotrad = 6,  //点数的半径
             firstturn = true, //是否是第一局
-            dx = dicex , //骰子的x坐标
-            dy = dicey; //骰子的x坐标
+            point = 0, //上一次的点数
+            dx, //骰子的x坐标
+            dy; //骰子的x坐标
             
         function throwdice(){
             var sum = ch = Math.floor(Math.random() * 6) + 1 ,
                 stage = document.getElementById("stage"),
                 pv = document.getElementById("point"),
                 outcome = document.getElementById("outcome");
-                
+             
+            dx = dicex;
+            dy = dicey; 
             drawface(ch);
 
             dx = 2 * dicex + dicewidth;
@@ -43,14 +46,17 @@
                     case 7:
                     case 11:
                         outcome.value = "You win!";
+                        pv.value = sum;
                         break;
                     case 2:
                     case 3:
                     case 12:
-                        outcome.value = "You lost!"
+                        outcome.value = "You lost!";
+                        pv.value = sum;
                         break;
                     default:
                         stage.value = "Need follow-up throw";
+                        outcome.value = "";
                         pv.value = sum;
                         firstturn = false;
                 }
@@ -58,13 +64,15 @@
                 if(sum === point){
                     outcome.value = "You win!";
                     stage.value = "Back to first throw";
-                    pv.value = "";
+                    //pv.value = "";
                     firstturn = true;
                 }else if(sum === 7) {
                     outcome.value = "You lost!";
                     stage.value = "Back to first throw";
-                    pv.value = "";
+                    //pv.value = "";
                     firstturn = true;
+                }else{
+                    pv.value = sum;
                 }             
             }
             point = sum; //记录上次点数
@@ -117,11 +125,13 @@
                 
             ctx.beginPath();
             ctx.arc(dotx, doty, dotrad, 0,  Math.PI * 2, true);
+            ctx.closePath();
+            ctx.fill();
             
+            ctx.beginPath();
             dotx = dx + dicewidth - 3 * dotrad;
             doty = dy + diceheight - 3 * dotrad;
             ctx.arc(dotx, doty, dotrad, 0,  Math.PI * 2, true);
-            
             ctx.closePath();
             ctx.fill();
         }  
@@ -136,15 +146,20 @@
             dotx = dx + dicewidth - 3 * dotrad;
             doty = dy + 3 * dotrad;
             ctx.arc(dotx, doty, dotrad, 0,  Math.PI * 2, true);
+            ctx.closePath();
+            ctx.fill();
             
+            ctx.beginPath();
             dotx = dx + dicewidth - 3 * dotrad;
             doty = dy + diceheight - 3 * dotrad;
             ctx.arc(dotx, doty, dotrad, 0,  Math.PI * 2, true);
+            ctx.closePath();
+            ctx.fill();
             
+            ctx.beginPath();
             dotx = dx + 3 * dotrad;
             doty = dy + diceheight - 3 * dotrad;
             ctx.arc(dotx, doty, dotrad, 0,  Math.PI * 2, true);
-            
             ctx.closePath();
             ctx.fill();
         }    
@@ -155,11 +170,12 @@
                 
             ctx.beginPath();
             ctx.arc(dotx, doty, dotrad, 0,  Math.PI * 2, true);
+            ctx.closePath();
+            ctx.fill();
             
-
-            doty = dy + .5 * diceheight - .5 * dotrad;
+            ctx.beginPath();
+            doty = dy + diceheight - 3 * dotrad;
             ctx.arc(dotx, doty, dotrad, 0,  Math.PI * 2, true);
-            
             ctx.closePath();
             ctx.fill();
         }
