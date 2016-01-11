@@ -23,7 +23,7 @@
             diceheight = 100,
             dotrad = 6,
             turn = 1,
-            firstpoint = true,
+            firstturn = true,
             dx,
             dy;
             
@@ -43,7 +43,7 @@
             ch = Math.floor(Math.random() * 6) + 1;
             drawface(ch);
             sum += ch;
-            if(firstpoint){
+            if(firstturn){
                 switch(sum){
                     case 7:
                     case 11:
@@ -57,19 +57,19 @@
                     default:
                         stage.value = "Need follow-up throw";
                         pv.value = sum;
-                        firstpoint = false;
+                        firstturn = false;
                 }
             }else{
-                if(point === lastpoint){
+                if(sum === point){
                     outcome.value = "You win!";
                     stage.value = "Back to first throw";
                     pv.value = "";
-                    firstpoint = true;
-                }else if(point === 7) {
+                    firstturn = true;
+                }else if(sum === 7) {
                     outcome.value = "You lost!";
                     stage.value = "Back to first throw";
                     pv.value = "";
-                    firstpoint = true;
+                    firstturn = true;
                 }             
             }
             point = sum;
