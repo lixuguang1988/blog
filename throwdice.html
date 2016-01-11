@@ -28,7 +28,7 @@
             dy;
             
         function throwdice(){
-            var ch = Math.floor(Math.random * 6) + 1,
+            var ch = Math.floor(Math.random() * 6) + 1,
                 sum = 0,
                 stage = document.getElementById("stage"),
                 pv = document.getElementById("point"),
@@ -40,7 +40,7 @@
             sum = ch;
             
             dx = 2 * dicex + dicewidth;
-            ch = Math.floor(Math.random * 6) + 1;
+            ch = Math.floor(Math.random() * 6) + 1;
             drawface(ch);
             sum += ch;
             if(firstpoint){
