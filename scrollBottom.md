@@ -2,7 +2,7 @@
 ```javascript
 if( document.compatMode == "CSS1Compat" && (document.documentElement.clientHeight + document.body.scrollTop == document.body.scrollTop)){
   console.log("滚动到底了");
-}else if(document.documentElement.clientHeight + document.body.scrollTop == document.body.scrollTop){
+}else if(document.body.clientHeight + document.body.scrollTop == document.body.scrollTop){
   console.log("滚动到底了");
 }
 ```
