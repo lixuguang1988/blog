@@ -7,5 +7,7 @@ if( document.compatMode == "CSS1Compat" && (document.documentElement.clientHeigh
 }
 ```
 #####标准模式下 
-chrome46.0.2490.86  document.documentElement.scrollTop：0 document.body.scrollTop 516   
-firefox43/IE7~11  document.documentElement.scrollTop ：330  document.body.scrollTop ：0
+chrome46.0.2490.86/safari5.1.7/opera33.0.1990.115    
+document.documentElement.scrollTop：0 document.body.scrollTop 516   
+firefox43/IE7~11   
+document.documentElement.scrollTop ：330  document.body.scrollTop ：0
