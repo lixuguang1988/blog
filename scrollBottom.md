@@ -6,3 +6,6 @@ if( document.compatMode == "CSS1Compat" && (document.documentElement.clientHeigh
   console.log("滚动到底了");
 }
 ```
+标准模式下 
+chrome46.0.2490.86  document.documentElement.scrollTop：0 document.body.scrollTop 516   
+firefox43/IE7~11  document.documentElement.scrollTop ：330  document.body.scrollTop ：0
