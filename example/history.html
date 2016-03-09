@@ -22,11 +22,11 @@
 
         <script>
             var doctitle = document.title,
-                    docloc = location.href,
-                    hashIndex = docloc.indexOf("#"),
+                    //docloc = location.href,
+                    //hashIndex = docloc.indexOf("#"),
                     hashValue = location.hash.substring(1);
 
-            docloc = hashIndex ? docloc.substring(0, hashIndex) : docloc; //获得不含hash的url地址
+            //docloc = hashIndex ? docloc.substring(0, hashIndex) : docloc; //获得不含hash的url地址
 
             if(!!hashValue){
                 updatePage({hash : hashValue});
@@ -42,7 +42,7 @@
                     //history.pushState(stateObject, title, url); //title基本都没实现
                     history.pushState({
                         hash: target.id
-                    }, doctitle + target.id, docloc + "#" + target.id);
+                    }, doctitle + target.id, "#" + target.id);
 
                     updatePage({id: target.id, hash : target.id});
 

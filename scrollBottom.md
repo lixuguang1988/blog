@@ -15,3 +15,14 @@ document.body.scrollTop 516
 firefox43/IE7~11   
 document.documentElement.scrollTop ：330    
 document.body.scrollTop ：0
+
+```javascript
+//$(window).on("scroll", function(){
+//    if( /*这里面加知否正在加载的判断, 有没有新数据了*/){
+//        return false;
+//    }
+//    if($(document).scrollTop() + $(window).height() >= $(document).height()){
+//        /*LoadMore();*/
+//    }
+//});
+```
