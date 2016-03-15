@@ -71,3 +71,7 @@ Orientation Rotate只保存默认的旋转，也就是用户自己保存旋转�
 ##UC浏览器对rem支持问题
 UC的rem二次渲染不行,rem根据html字体大小来计算的，页面加载完成后更改html的字体大小，UC上不起作用。如果要更改html基准字体大小要在head里面就更改，不能到页面加载后更改.
 
+##WebStorm file watcher
+
+
+
