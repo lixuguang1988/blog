@@ -67,7 +67,7 @@ for( ; i < len; i++){
   
   //同级菜单
   if(recordList[recordList.length - 1]['level'] === data[i]['level']){
-    str += '</li><li><a href="' + data[i]["url"] + '">' + data[i]["name"] + '</a></li>';
+    str += '</li><li><a href="' + data[i]["url"] + '">' + data[i]["name"] + '</a>';
     continue;
   }
   
