@@ -51,27 +51,27 @@ var recordList = [] /*记录遍历的树*/,
     
 for( ; i < len; i++){
   if(recordList.length === 0){
-    str += '<li><a href="' + data[i].url + '">' + data[i].name + '</a>';
+    str += '<li><a href="' + data[i]["url"] + '">' + data[i]["name"] + '</a>';
     recordList.push(data[i]);
     continue;
   }
   
   //子级菜单
   if(recordList[recordList.length - 1]['level'] < data[i]['level']){
-    str += '<ul><li><a href="' + data[i].url + '">' + data[i].name + '</a>';
+    str += '<ul><li><a href="' + data[i]["url"] + '">' + data[i]["name"] + '</a>';
     recordList.push(data[i]);
     continue;
   }  
   
   //同级菜单
   if(recordList[recordList.length - 1]['level'] === data[i]['level']){
-    str += '</li><li><a href="' + data[i].url + '">' + data[i].name + '</a></li>';
+    str += '</li><li><a href="' + data[i]["url"] + '">' + data[i]["name"] + '</a></li>';
     continue;
   }
   
   //回上一级菜单
   if(recordList[recordList.length - 1]['level'] > data[i]['level']){
-    str += '</li><li><a href="' + data[i].url + '">' + data[i].name + '</a>';
+    str += '</li><li><a href="' + data[i]["url"] + '">' + data[i]["name"] +  '</a>';
     recordList.shift();
     continue;
   }  
