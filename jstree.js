@@ -43,21 +43,7 @@ var data = [
   }
 ];
 
-var recordList = [] /*记录遍历的树*/,
-    str = '<ul class="js-tree">',
-    i = 0,
-len = data.length ;
-    parentid : 0,
-    url : "/menu1/23/"
-  },
-  {
-    id : 3,
-    name : "菜单3"，
-    level :　１，
-    parentid : 0,
-    url : "/menu3/"
-  }
-];
+
 
 var recordList = [] /*记录遍历的树*/,
     str = '<ul class="js-tree">',
