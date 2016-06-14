@@ -79,9 +79,19 @@ for( ; i < len; i++){
   }  
 }    
     
-    str +='</ul> '
+   for(i = 0; i < recordList.length; i++){
+      str += '</li></ul>';
+   }
     
-    console.log(str)
+    
+    console.log(str);
+    
+    
+    var div = document.createElement("div");
+      
+    div.innerHTML = str;
+    
+    document.body.appendChild(div);
     
     
     
