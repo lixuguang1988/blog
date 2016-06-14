@@ -89,9 +89,10 @@ for( ; i < len; i++){
   if(recordList[recordList.length - 1]['level'] > data[i]['level']){
     for(var  j = 0; j < recordList[recordList.length - 1]['level'] - data[i]['level']; j++){
       str += '</li></ul>';
+      recordList.shift();
     }
     str += '<li><a href="' + data[i]["url"] + '">' + data[i]["name"] +  '</a>';
-    recordList.shift();
+
     continue;
   }  
 }    
