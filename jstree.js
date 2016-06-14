@@ -87,7 +87,10 @@ for( ; i < len; i++){
   
   //回上一级菜单
   if(recordList[recordList.length - 1]['level'] > data[i]['level']){
-    str += '</li></ul><li><a href="' + data[i]["url"] + '">' + data[i]["name"] +  '</a>';
+    for(var  j = 0; j < recordList[recordList.length - 1]['level'] - data[i]['level']; j++){
+      str += '</li></ul>';
+    }
+    str += '<li><a href="' + data[i]["url"] + '">' + data[i]["name"] +  '</a>';
     recordList.shift();
     continue;
   }  
