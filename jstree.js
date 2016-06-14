@@ -73,7 +73,7 @@ for( ; i < len; i++){
   
   //回上一级菜单
   if(recordList[recordList.length - 1]['level'] > data[i]['level']){
-    str += '</li><li><a href="' + data[i]["url"] + '">' + data[i]["name"] +  '</a>';
+    str += '</ul><li><a href="' + data[i]["url"] + '">' + data[i]["name"] +  '</a>';
     recordList.shift();
     continue;
   }  
