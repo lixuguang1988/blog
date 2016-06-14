@@ -87,7 +87,7 @@ for( ; i < len; i++){
   
   //回上一级菜单
   if(recordList[recordList.length - 1]['level'] > data[i]['level']){
-    for(var  j = 0; j < recordList[recordList.length - 1]['level'] - data[i]['level']; j++){
+    for(var  j = 0, diff = recordList[recordList.length - 1]['level'] - data[i]['level']; j < diff ; j++){
       str += '</li></ul>';
       recordList.shift();
     }
