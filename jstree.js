@@ -24,9 +24,16 @@ var data = [
     id : 22,
     name : "菜单22",
     level :　2,
-    parentid : 0,
+    parentid : 2,
     url : "/menu1/22/"
-  },  
+  }, 
+    {
+    id : 322,
+    name : "菜单322",
+    level :　3,
+    parentid : 22,
+    url : "/menu1/22/322/"
+  },
   {
     id : 23,
     name : "菜单23",
