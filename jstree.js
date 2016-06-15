@@ -89,7 +89,7 @@ for( ; i < len; i++){
   if(recordList[recordList.length - 1]['level'] > data[i]['level']){
     for(var  j = 0, diff = recordList[recordList.length - 1]['level'] - data[i]['level']; j < diff ; j++){
       str += '</li></ul>';
-      recordList.shift();
+      recordList.pop();
     }
     str += '<li><a href="' + data[i]["url"] + '">' + data[i]["name"] +  '</a>';
 
