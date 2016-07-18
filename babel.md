@@ -1,11 +1,11 @@
-# babel jsx的用法
-1 安装 babel babel-preset-react     
+# babel 的用法
+1 安装 babel babel-preset-react(添加jsx的支持)     
 npm install --save babal-cli  
-npm install --save babel-preset-react  
+npm install --save babel-preset-react    //(jsx)  
 2 配置.babelrc  
 ```javascript
 {
-  "presets" : ["react"]
+  "presets" : ["react"] //要支持jsx["react"], 不要支持[]
 }
 ```
 3 terminal里面执行命令   
