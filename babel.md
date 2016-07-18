@@ -1,5 +1,5 @@
 # babel jsx的用法
-* 安装 babel babel-preset-react
+* 安装 babel babel-preset-react   
 npm install --save babal-cli  
 npm install --save babel-preset-react  
 * 配置.babelrc  
