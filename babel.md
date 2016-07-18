@@ -7,6 +7,7 @@ npm install --save babel-preset-react
 {
   "presets" : ["react"]
 }
+```
 * terminal里面执行命令
 babel src -d lib //把src目录里面的jsx文件转换到lib里面的普通js文件
 
