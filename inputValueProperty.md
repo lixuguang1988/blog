@@ -1,12 +1,13 @@
 #input type=text 的value值成了property
 ```html
-<html  id="stateCate" style="display:none">
+<div  id="stateCate" style="display:none">
     <div class="state-cate">
         <div class="state-cate-group">
             <span class="btn"><button class="btn-inner">更改</button></span>
             <input type="text" value="游玩" name="cate" >
         </div>
-</html>
+    </div>
+</div>
 ```
 ```javascript
 var modal = null,
@@ -24,5 +25,6 @@ $(".state-cate input").val("赋新值无效"); //
             <span class="btn"><button class="btn-inner">更改</button></span>
             <input type="text" value="游玩" name="cate" >
         </div>
+    </div>
 </script>
 ```
