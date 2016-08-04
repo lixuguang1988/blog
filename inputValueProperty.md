@@ -1,6 +1,6 @@
 #input type=text 的value值成了property
 ```html
-<html  id="stateCate" style="display">
+<html  id="stateCate" style="display:none">
     <div class="state-cate">
         <div class="state-cate-group">
             <span class="btn"><button class="btn-inner">更改</button></span>
