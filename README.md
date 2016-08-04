@@ -65,7 +65,7 @@ Orientation Rotate只保存默认的旋转，也就是用户自己保存旋转�
 1.安装git
 2.设置git的环境变量
 
-##[点击textareaIE6/7，textrea会往下面移](./textareablankspace.md)
+##[点击textareaIE6/7，textarea会往下面移](./textareablankspace.md)
 删除textarea前后的空白
 
 ##UC浏览器对rem支持问题
