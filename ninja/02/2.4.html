@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Test suite</title>
+        <script>
+            function assert(value, desc){
+                var results = document.getElementById("results"),
+                    li = document.createElement("li");
+                
+                li.className = value ? "pass" : "fail";
+                li.appendChild(document.createTextNode(desc));
+                results.appendChild(li);
+            }
+            
+            window.onload =  function(){
+                assert(true, "The test suite is running.");
+                assert(false, "Fail!");
+            }
+        </script>
+        <style type="text/css">
+            #results .pass{color: greed}
+            #results .fail{color: red}
+        </style>
+    </head>
+    <body>
+        <ul id="results"></ul>
+    </body>
+</html>
