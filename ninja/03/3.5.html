@@ -1,33 +1,33 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Test suite</title>
-        <link href="../assert.css" rel="stylesheet">
-        <script src="../assert.js"></script>
-        <script>
-            window.onload =  function(){
-                function juggle(){
-                    var result = 0,
-                            i = 0,
-                            length = arguments.length;
-                    for( ; i < length; i++){
-                        result +=arguments[i];
-                    }
-                    this.result = result;
+<head>
+    <meta charset="utf-8">
+    <title>Test suite</title>
+    <link href="../assert.css" rel="stylesheet">
+    <script src="../assert.js"></script>
+    <script>
+        window.onload =  function(){
+            function juggle(){
+                var result = 0,
+                        i = 0,
+                        length = arguments.length;
+                for( ; i < length; i++){
+                    result +=arguments[i];
                 }
-                var ninja1 = {};
-                var ninja2 = {};
-
-                juggle.apply(ninja1,  [1, 2, 3, 4]);
-                juggle.call(ninja2, 5, 6, 7, 8);
-
-                assert(ninja1.result === 10 , "juggled via apply");
-                assert(ninja2.result === 26, "juggled via call");
+                this.result = result;
             }
-        </script>
-    </head>
-    <body>
-        <ul id="results"></ul>
-    </body>
+            var ninja1 = {};
+            var ninja2 = {};
+
+            juggle.apply(ninja1,  [1, 2, 3, 4]);
+            juggle.call(ninja2, 5, 6, 7, 8);
+
+            assert(ninja1.result === 10 , "juggled via apply");
+            assert(ninja2.result === 26, "juggled via call");
+        }
+    </script>
+</head>
+<body>
+    <ul id="results"></ul>
+</body>
 </html>
