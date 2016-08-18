@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Test suite</title>
+        <link href="../assert.css" rel="stylesheet">
+        <script src="../assert.js"></script>
+        <script>
+            window.onload =  function(){
+                function creep(){ return this; }
+                assert(creep() === window , "creep is in the window");
+                var sneak = creep;
+                assert(sneak() === window, "sneak is in the window");
+                var ninja1 = {
+                    skulk : creep
+                };
+                assert(ninja1.skulk() == ninja1, "the 1st ninja is skulk");
+            }
+        </script>
+    </head>
+    <body>
+        <ul id="results"></ul>
+    </body>
+</html>

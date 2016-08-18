@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Test suite</title>
+        <link href="../assert.css" rel="stylesheet">
+        <script src="../assert.js"></script>
+        <script>
+            window.onload =  function(){
+                function Ninja(){
+                    this.skulk = function(){
+                        return this;
+                    };
+                }
+                var ninja1 = new Ninja();
+                var ninja2 = new Ninja();
+                assert(ninja1.skulk() === ninja1 , "the 1st ninja is skulk");
+                assert(ninja2.skulk() === ninja2, "the 2nd ninja is skulk");
+            }
+        </script>
+    </head>
+    <body>
+        <ul id="results"></ul>
+    </body>
+</html>
