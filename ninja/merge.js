@@ -6,3 +6,5 @@ function merge(root){
     }
     return root;
 }
+
+//merge({"name": "lixuguang"}, {"name" : "guanniu", "age" : 27});
