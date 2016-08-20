@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>chirp</title>
+    <link href="../assert.css" rel="stylesheet">
+    <script src="../assert.js"></script>
+    <script>
+        window.onload =  function(){
+            assert(ninja.chirp(3) === "chirp-chirp-chirp" , "Calling the named function comes naturally.");
+        };
+        var ninja = {
+            chirp : function(n){
+                return n > 1 ? ninja.chirp(n-1) + "-chirp" : "chirp";
+            }
+        };
+        var samurai = { chirp : chirp};
+        
+        ninja = {};
+        
+        assert(samurai.chirp() === "chirp-chirp-chirp", "Is this going to work");
+        
+    </script>
+</head>
+<body>
+    <ul id="results"></ul>
+</body>
+</html>
