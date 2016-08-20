@@ -18,7 +18,13 @@
         
         ninja = {};
         
-        assert(samurai.chirp() === "chirp-chirp-chirp", "Is this going to work");
+        try{
+          assert(samurai.chirp() === "chirp-chirp-chirp", "Is this going to work");  
+        }catch(e){
+            assert(false, "Uh, this isn't goods! Where is ninja.chirp go!");
+        }
+        
+        
         
     </script>
 </head>
