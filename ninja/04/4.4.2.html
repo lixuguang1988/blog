@@ -7,15 +7,16 @@
     <script src="../assert.js"></script>
     <script>
         window.onload =  function(){
+
             var ninja = {
-                chirp : function signal(n){
-                    return n > 1 ? signal(n-1) + "-chirp" : "chirp";
+                chirp : function(n){
+                    return n > 1 ? this.chirp(n-1) + "-chirp" : "chirp";
                 }
             };
             assert(ninja.chirp(3) === "chirp-chirp-chirp" , "Calling the named function comes naturally.");
-            
+
             var samurai = { chirp : ninja.chirp};
-        
+            
             ninja = {};
             
             try{
@@ -24,6 +25,7 @@
                 assert(false, "Uh, this isn't goods! Where is ninja.chirp go!");
             }
         };
+        
     </script>
 </head>
 <body>

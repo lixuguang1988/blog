@@ -4,7 +4,7 @@
  * name   String  方法名
  * fn     Function 函数
 **/
-functon addMehtod(object, name, fn){
+function addMehtod(object, name, fn){
     //保存原来的函数
     var old = object[name];
     object[name] = function(){

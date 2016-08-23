@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>store functions</title>
+    <link href="../assert.css" rel="stylesheet">
+    <script src="../assert.js"></script>
+    <script>
+        window.onload =  function(){
+            var store = {
+                nextId : 1,
+                cache : {},
+                add : function(fn){
+                    if(!fn.id){
+                        fn.id = this.nextId++;
+                        return !!(this.cache[fn.id]= fn);
+                    }
+                }
+            };
+
+            function ninja(){}
+
+            assert(store.add(ninja), "Function is safely added.");
+            assert(!store.add(ninja), "But it only add once");
+        };
+    </script>
+</head>
+<body>
+    <ul id="results"></ul>
+</body>
+</html>

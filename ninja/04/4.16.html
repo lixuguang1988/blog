@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Function 重载</title>
+    <link href="../assert.css" rel="stylesheet">
+    <script src="../assert.js"></script>
+    <script src="../addMethod.js"></script>
+    <script>
+        window.onload =  function(){
+            console.log(ninjas.find("Dean", "Edwards"));
+            assert(ninjas.find().length == 3, "Found all ninjas");
+        };
+
+        var ninjas = {
+            values :  ["Dean Edwards", "Sam stephenson", "Alex Russell"]
+        };
+
+        addMehtod(ninjas, "find", function(){
+            return this.values;
+        });
+
+        addMehtod(ninjas, "find", function(name){
+            var ret = [],
+                    i = 0,
+                    length = this.values.length;
+            for( ; i < length ; i++){
+                if(this.values[i].indexOf(name) == 0){
+                    ret.push(this.values[i]);
+                }
+            }
+            return ret;
+        });
+
+        addMehtod(ninjas, "find", function(first, last){
+            var ret = [],
+                    i = 0,
+                    length = this.values.length;
+            for( ; i < length ; i++){
+                if(this.values[i] == first + " " + last){
+                    ret.push(this.values[i]);
+                }
+            }
+            return ret;
+        });
+
+    </script>
+</head>
+<body>
+    <ul id="results"></ul>
+</body>
+</html>

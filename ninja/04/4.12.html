@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Math.prototype</title>
+    <link href="../assert.css" rel="stylesheet">
+    <script src="../assert.js"></script>
+    <script src="../merge.js"></script>
+    <script>
+        window.onload =  function(){
+            var merged = merge({
+                name : "batou"
+            }, {
+                city : "Niihama"
+            });
+            assert(merged.name === "batou", "the original name is intact");
+            assert(merged.city === "Niihama", "And the city has been copied over.");
+        };
+
+    </script>
+</head>
+<body>
+
+    <ul id="results"></ul>
+    <input type="hidden" id="first" value="first" />
+    <input type="hidden" id="second" value="second" />
+</body>
+</html>
