@@ -73,5 +73,14 @@ UC的rem二次渲染不行,rem根据html字体大小来计算的，页面加载�
 
 ##WebStorm file watcher
 
+##CSS after/before里面用unicode
+```css
+.close:after{
+   content: "\00D7";
+}
+```
+\ + unicode编码
+
+
 
 
