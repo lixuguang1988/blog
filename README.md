@@ -112,6 +112,21 @@ function iScrollClick(){
 }
 ```
 
+#iScroll 里面:active无效
+```css
+.index-i-item > div:active{
+    transform: scale(.98);
+    -webkit-transform: scale(.98);
+}
+```
+iScroll的配置参数preventDefaultException
+```javascript
+var myScroll = new IScroll('.page-on-center', {
+      mouseWheel: true,
+      click: true,
+      preventDefaultException : { tagName: /^(INPUT|TEXTAREA|BUTTON|SELECT|DIV)$/ }  
+});
+```
 
 
 
