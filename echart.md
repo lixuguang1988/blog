@@ -14,7 +14,6 @@ tooltip : {
   tooltip : {
     //模板变量有 {a}, {b}，{c}，{d}，{e}，分别表示系列名，数据名，数据值等0,1代表series的序列
     formatter: '{b0}: {c0}<br />{b1}: {c1}'; 
-    
     formatter: function(param){
       return param.name + param.value;
       //custom会data里面自定义的值
