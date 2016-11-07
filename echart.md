@@ -21,3 +21,10 @@ tooltip : {
     }
   }
 ```
+##x轴的刻度定制,和x轴没有的刻度怎么显示圆圈
+```javascript
+tooltip: {
+  trigger: "item"  //x轴没有的刻度不能显示tooltip怎么办
+}
+
+
