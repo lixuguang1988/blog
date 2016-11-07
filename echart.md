@@ -26,5 +26,14 @@ tooltip : {
 tooltip: {
   trigger: "item"  //x轴没有的刻度不能显示tooltip怎么办
 }
+series: [
+        {
+            name:'邮件营销',
+            type:'line',
+            showAllSymbol: true, //标志图形默认只有主轴显示（随主轴标签间隔隐藏策略），如需全部显示可把 showAllSymbol 设为 true。
+            data:[]
+          }
+         ]
+```                    
 
 
