@@ -128,6 +128,13 @@ var myScroll = new IScroll('.page-on-center', {
 });
 ```
 
+##bootstrap的modal的显示的时候，新弹出窗口中input[type=file]ie8无法选择文件
+```javascript
+   //#editAffiche 为modal的ID
+    $('#editAffiche, #addAffiche').on('shown.bs.modal', function() {
+        $(document).off('focusin.modal');
+    });
+```
 
 
 
