@@ -137,4 +137,4 @@ var myScroll = new IScroll('.page-on-center', {
 ```
 
 ##Sass安装方法
-先安装ruby,然后gem [ sass 安装 window下sass的安装方法](gem sources --remove https://rubygems.org/)
+先安装ruby,然后gem [sass 安装 window下sass的安装方法](http://blog.csdn.net/uu_justdoit/article/details/51213779)
