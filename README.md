@@ -73,5 +73,68 @@ UC的rem二次渲染不行,rem根据html字体大小来计算的，页面加载�
 
 ##WebStorm file watcher
 
+##CSS after/before里面用unicode
+```css
+.close:after{
+   content: "\00D7";
+}
+```
+\ + [unicode编码](http://unicode-table.com/cn/)
 
+##iScroll里button的click事件触发两次
+```javascript
+//单个题目回答情况统计
+//.btn 改成div就没问题
+$("#hwSubjectsStats").on("click", ".btn", function(e){
+    console.log("hwSubjectStats");
+    var id = $(this).data("id");
+    $("#hwSubjectStats").show().siblings().hide();
 
+    //mainScroll.refresh();
+    //控制url
+    history.pushState({type: "hwSubjectStats", id: id }, "", "?type=hwSubjectStats&id=" + id);
+});
+```
+解决方法[IScroll5+在ios、android点击（click）事件不兼容解决方法](http://www.52html5.com/?p=2618)
+```javascript
+function initMain() {
+   if(!$("#main").length){return false;}
+   mainScroll = new IScroll('#main', { mouseWheel: true , click: iScrollClick(), probeType: 3});
+}
+function iScrollClick(){
+   if (/iPhone|iPad|iPod|Macintosh/i.test(navigator.userAgent)) return false;
+   if (/Chrome/i.test(navigator.userAgent)) return (/Android/i.test(navigator.userAgent));
+   if (/Silk/i.test(navigator.userAgent)) return false;
+   if (/Android/i.test(navigator.userAgent)) {
+       var s=navigator.userAgent.substr(navigator.userAgent.indexOf('Android')+8,3);
+       return parseFloat(s[0]+s[3]) < 44 ? false : true
+   }
+}
+```
+
+#iScroll 里面:active无效
+```css
+.index-i-item > div:active{
+    transform: scale(.98);
+    -webkit-transform: scale(.98);
+}
+```
+iScroll的配置参数preventDefaultException
+```javascript
+var myScroll = new IScroll('.page-on-center', {
+      mouseWheel: true,
+      click: true,
+      preventDefaultException : { tagName: /^(INPUT|TEXTAREA|BUTTON|SELECT|DIV)$/ }  
+});
+```
+
+##bootstrap的modal的显示的时候，新弹出窗口中input[type=file]ie8无法选择文件
+```javascript
+//#editAffiche 为modal的ID
+ $('#editAffiche, #addAffiche').on('shown.bs.modal', function() {
+     $(document).off('focusin.modal');
+ });
+```
+
+##Sass安装方法
+先安装ruby,然后gem [sass 安装 window下sass的安装方法](http://blog.csdn.net/uu_justdoit/article/details/51213779)
