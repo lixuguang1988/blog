@@ -1,0 +1,39 @@
+{
+  "name": "router",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --watch --progress --color"
+    // "dev": "cross-env webpack-dev-server --progress --color"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.5.3",
+    "babel-cli": "^6.23.0",
+    "babel-preset-env": "^1.2.1",
+    "buble": "^0.15.1",
+    "buble-loader": "^0.4.0",
+    "cross-env": "^3.2.3",
+    "css-loader": "^0.26.0",
+    "extract-text-webpack-plugin": "^2.0.0-beta.3",
+    "file-loader": "^0.10.0",
+    "html-webpack-plugin": "^2.24.1",
+    "rimraf": "^2.5.4",
+    "style-loader": "^0.13.2",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^2.4.0",
+    "sw-precache-webpack-plugin": "^0.9.0",
+    "url-loader": "^0.5.7",
+    "vue-loader": "^10.0.2",
+    "vue-template-compiler": "^2.1.8",
+    "webpack": "^2.2.0",
+    "webpack-dev-middleware": "^1.8.4",
+    "webpack-hot-middleware": "^2.13.2"
+  },
+  "dependencies": {
+    "normalize.css": "^5.0.0"
+  }
+}

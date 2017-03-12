@@ -1,0 +1,17 @@
+{
+    "name": "lixuguang",
+    "positions":[
+        {
+            "range" : "2010.4-2014.4",
+            "company": "hogesoft"
+        },
+        {
+            "range" : "2014.4-2015.2",
+            "company": "softstone"
+        },
+        {
+            "range" : "2015.2-",
+            "company": "linkageinfo"
+        }
+    ] 
+}
