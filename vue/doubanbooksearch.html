@@ -394,8 +394,6 @@
               return  {
                     book: null,
                     reviews: [],
-                    total: 0,
-                    start: 0,
                     loading: false,
                 }
             },
@@ -441,34 +439,14 @@
                     }).done(function(data){
                         that.book = data;
                         //initial tab
-                        setTimeout(function(){
+                        Vue.nextTick(function(){
                             $('#bookDetTab a').click(function (e) {
                                 e.preventDefault()
                                 $(this).tab('show')
                             })
-                        }, 50);
+                        });
                     });
                 },
-                fetchSearchData: function(v, index){
-                    var that = this;
-                    index = index || 0;
-
-                    bookFetchXHR = $.ajax({
-                        url: baseApiUrl + "/v2/book/search?q=" + v + "&start=" + index * count,
-                        dataType: "jsonp",
-                        type: "GET",
-                        beforeSend: function(){
-                            that.loading = true;
-                        }
-                    }).done(function(data){
-                        that.books = data.books;
-                        that.total = data.total;
-                        that.start = data.start;
-                    }).always(function(){
-                        that.loading = false;
-                        that.initial = false;
-                    });
-                }
             }            
         }
 
