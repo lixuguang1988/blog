@@ -103,7 +103,7 @@ export default {
       this.search.page = 1;
       this.search.tab = to.query.tab;
       this.nomore = false;
-      this.ajax = true;
+      this.ajax = false;
 
       this.fetch();
     }
