@@ -93,6 +93,7 @@ export default {
     right: 0;
     background: rgba(0, 0, 0, .4);
     bottom: 0;
+    z-index: 101
     /*display: none;*/
 }
 .aside{
@@ -106,6 +107,7 @@ export default {
     -moz-transition:  all .5s linear;
     transition:  all .5s linear;
     padding-top: 50px;
+    z-index: 103;
 }
 .aside-active{
     left: 0;
