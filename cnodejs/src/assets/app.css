@@ -1,0 +1,33 @@
+.topic-content img {
+  max-width: 100% !important;
+}
+.topic-content blockquote{
+    border-left: 3px solid #eee;
+    margin: 0;
+    padding-left: 10px;
+}
+.topic-content a{
+    color: #5256fb
+}
+.topic-content h1, .topic-content h2, .topic-content h3, .topic-content h4, .topic-content h5, .topic-content h6{
+    font-weight: 100;
+}
+
+.reply-item .item-main p{
+    margin: 0;
+    line-height: 1.8;
+}
+.reply-item a{
+    text-decoration: none;
+}
+
+
+.fade-enter-active, .fade-leave-active{
+    transition: all .5s linear;
+}
+.fade-enter-active, .fade-leave{
+    opacity: 1;
+}
+.fade-enter, .fade-leave-active{
+    opacity: 0;
+}
