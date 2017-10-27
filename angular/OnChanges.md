@@ -1,6 +1,6 @@
-# OnChanges 当Angular（重新）设置数据绑定输入属性时响应。 该方法接受当前和上一属性值的SimpleChanges对象
+## OnChanges 当Angular（重新）设置数据绑定输入属性时响应。 该方法接受当前和上一属性值的SimpleChanges对象
 
-## 父组件
+### 父组件
 ```html
   <peek-a-bio name="title"></peek-a-bio>
 ```
@@ -11,7 +11,7 @@
 ```
 
 
-##子组件
+### 子组件
 ```js
   @Input name;
   
