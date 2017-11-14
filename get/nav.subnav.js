@@ -18,17 +18,18 @@ $navPop.on("mouseenter", function(o) {
   }, 100)
 }).on("mouseleave", function(i) {
   var $this = $(this);
-  clearTimeout(enter_timer),
+  clearTimeout(enter_timer);
   leave_timer = setTimeout(function() {
-    $subNav.slideUp("fast"),
+    $subNav.slideUp("fast");
     $navPop.removeClass("on")
   }, 150);
 }),
 $subNav.on("mouseenter", function(e) {
   clearTimeout(leave_timer)
 }).on("mouseleave", function(e) {
+  //不清除enter_timer(已经显示了)
   leave_timer = setTimeout(function() {
-    $subNav.slideUp("fast"),
+    $subNav.slideUp("fast");
     $navPop.removeClass("on")
   }, 150)
 })
