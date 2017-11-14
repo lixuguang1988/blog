@@ -9,12 +9,12 @@ var enter_timer = null
 
 $navPop.on("mouseenter", function(o) {
   var $this = $(this)
-    , a = $navPop.index($this);
+    , index = $navPop.index($this);
   clearTimeout(leave_timer);
   enter_timer = setTimeout(function() {
     $subNav.is(":visible") || $subNav.slideDown("fast");
     $this.addClass("on").siblings(".pop").removeClass("on");
-    $subItems.removeClass("active").eq(a).addClass("active")
+    $subItems.removeClass("active").eq(index).addClass("active")
   }, 100)
 }).on("mouseleave", function(i) {
   var $this = $(this);
