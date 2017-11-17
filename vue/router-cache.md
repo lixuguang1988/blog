@@ -1,5 +1,63 @@
 # 路由缓存
 [通常页面缓存实现方式](https://www.cnblogs.com/sysuhanyf/p/7454530.html)  
+```html
+<template>
+  <div id="app">
+    <keep-alive>
+      <router-view v-if="$route.meta.keepAlive" />
+    </keep-alive>
+    <router-view v-if="!$route.meta.keepAlive"></router-view>
+  </div>
+</template>
+```
+```js
+import Vue from 'vue'
+import Router from 'vue-router'
+import TopicIndex from '@/components/topicIndex'
+import TopicDetail from '@/components/topicDetail'
+import User from '@/components/user'
+import Note from '@/components/note'
+
+Vue.use(Router)
+
+export default new Router({
+  routes: [
+    {
+      path: '/',
+      name: 'index',
+      component: TopicIndex,
+      meta:{
+        keepAlive: true
+      }
+    },
+    {
+      path: '/topic/:id',
+      name: 'detail',
+      component: TopicDetail,
+      meta: {
+        keepAlive: true
+      }
+    },
+    {
+      path: '/note/:id',
+      name: 'note',
+      component: Note,
+      meta: {
+        keepAlive: false
+      }
+    },
+    {
+      path: '/user/:id',
+      name: 'user',
+      component: User,
+      meta: {
+        keepAlive: true
+      }
+    },
+  ]
+})
+```
+
 如果当前页面跳转/user/hustxiaoc 跳转 /user/dengnan123 
 ```js
 //watch $route 会在进入、离开都触发
