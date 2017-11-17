@@ -1,5 +1,5 @@
 # 路由缓存
-[通常页面缓存实现方式](https://www.cnblogs.com/sysuhanyf/p/7454530.html)
+[通常页面缓存实现方式](https://www.cnblogs.com/sysuhanyf/p/7454530.html)  
 如果当前页面跳转/user/hustxiaoc 跳转 /user/dengnan123 
 ```js
 watch: {
