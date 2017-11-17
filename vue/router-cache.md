@@ -36,8 +36,8 @@ export default {
     this.fetchData()
   },
   watch: {
-    $route(route, oldId) {
-      console.log('watch', route,  oldId);
+    $route(route, old) {
+      console.log('watch', route,  old);
       var id = route.params.id;
       //首次进来
       if(id == this.userId){ return }
@@ -72,3 +72,21 @@ export default {
   }
 }
 ```
+
+```html
+<template>
+  <div class="container">
+    <div v-if="!ajax && user" class="topic">
+      <h1>{{user.title}}</h1>
+      <div class="user-profile">
+        <div class="profile-avatar"><img :src="user.avatar_url" width="60" height="60"></div>
+        <div class="profile-name">{{user.loginname}}</div>
+        <div class="profile-meta"><span>加入时间:{{user.create_at | dateFormate}}</span><span>经验值:{{user.score}}</span></div>
+      </div>
+      <list-panel :title="'最近发起的话题'" :items="user.recent_topics"></list-panel>
+      <list-panel :title="'最近参与的话题'" :items="user.recent_replies"></list-panel>
+    </div>
+  </div>
+</template>
+```
+
