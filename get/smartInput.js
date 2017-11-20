@@ -19,7 +19,7 @@
                 }
             }).on('blur', function(){
                 timer_ = setTimeout(function(){
-                    $clear.hide()
+                    $clear.hide();
                 }, 50);
             });
 
