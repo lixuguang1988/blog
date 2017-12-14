@@ -9,3 +9,7 @@ ng set --global packageManager = npm
 
 ng set --global packageManager npm
 ```
+# npm安装ng-zorro-antd 0.5.x的版本(给予angular4(.2.4))
+```js
+npm install ng-zorro-antd@0.5.x --save
+```
