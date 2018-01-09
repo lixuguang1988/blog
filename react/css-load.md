@@ -12,11 +12,6 @@
           <Route path='/register' component={Register} />
           <Route path='/dashboard' component={Dashboard} />
           
-
-          <div style={{ width: 400, margin: '100px auto' }}>
-            <DatePicker onChange={e => this.handleChange(e)} />
-          </div>
-
         </div>
    )
 }       
