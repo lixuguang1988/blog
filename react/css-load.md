@@ -36,3 +36,5 @@ class Register extends Component {
 
 export default Register;
 ```
+
+react css in js来实现 组件级的css分离，可以使用styled-component/css-module 来 独立的css
