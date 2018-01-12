@@ -15,8 +15,5 @@ if(!Function.prototype.partial) {
             return fn.apply(this, args);
         }
     };
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> 074f540678585dd1d5d10585bb5fd833ec467ee8
