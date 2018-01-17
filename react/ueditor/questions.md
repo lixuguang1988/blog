@@ -9,4 +9,4 @@
    </html>
 ```
 * 原因ueditor如果不配置UEDITOR_HOME_URL（ueditor.config.js）地址计算会按最后一个js地址计算出相对目录，而生产的页面底部会追加<script type="text/javascript" src="/static/js/bundle.js"></script>   
-* 临时解决方式（非正式） 把script放到<code></body></code>后面
+* 临时解决方式（非正式） 把script放到<code><\/body></code>后面
