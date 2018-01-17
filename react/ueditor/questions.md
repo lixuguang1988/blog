@@ -2,10 +2,7 @@
   autoFloatEnabled [默认值：true] //是否保持toolbar的位置不动，默认true  
  
 # 页面中js的导入方式改为异步加载,后面导入文件找不到了
-  ```bash
-    ·
-    ·
-    ·
+  ```js
     <script async src="%PUBLIC_URL%/ueditor/ueditor.config.js"></script>
     <script async src="%PUBLIC_URL%/ueditor/ueditor.all.min.js"></script>
    </body>
