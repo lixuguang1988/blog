@@ -1,5 +1,6 @@
 # UEditor 初始化默认header随滚动条会fixed定位
   autoFloatEnabled [默认值：true] //是否保持toolbar的位置不动，默认true  
+     
  
 # 页面中js的导入方式改为异步加载,后面导入文件找不到了
 ```html
