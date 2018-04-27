@@ -28,7 +28,7 @@ $navPop.on("mouseenter", function(o) {
 $subNav.on("mouseenter", function(e) {
   clearTimeout(leave_timer)
 }).on("mouseleave", function(e) {
-  //不清除enter_timer(已经显示了)
+  //不清除enter_timer(已经显示了,不显示，进不来，也就出不去)
   leave_timer = setTimeout(function() {
     $subNav.slideUp("fast");
     $navPop.removeClass("on")
