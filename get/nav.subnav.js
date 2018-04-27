@@ -23,7 +23,8 @@ $navPop.on("mouseenter", function(o) {
     $subNav.slideUp("fast");
     $navPop.removeClass("on")
   }, 150);
-}),
+});
+
 $subNav.on("mouseenter", function(e) {
   clearTimeout(leave_timer)
 }).on("mouseleave", function(e) {
