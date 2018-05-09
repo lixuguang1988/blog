@@ -37,7 +37,8 @@ function flashChecker() {
 
 var fls = flashChecker();
 var div = document.createElement('div');
-div.innerHTML = '<div class="no-flash-tip"><a href="https://get.adobe.com/flashplayer" target="_blank">https://get.adobe.com/flashplayer<\/a><\/div>'
+div.setAttribute('class', 'no-flash-tip');
+div.innerHTML = '<a href="https://get.adobe.com/flashplayer" target="_blank">https://get.adobe.com/flashplayer<\/a>'
 if(!fls.f){
   document.body.appendChild(div)
 }
