@@ -1,0 +1,43 @@
+/**
+ * 没有安装flash插件不讨论
+ * ie11默认启动flash，因此总是能fls.hasFlash总是1
+ * chrome 要点击div 才能开启flash
+ * document.all  if 中 ie 10一下为真 , ie11,edge,chrome未假
+ * document.all 为HTMLAllCollection 为html中的所有元素
+ */
+
+function flashChecker() {
+    var hasFlash = 0;　　　　 //是否安装了flash
+    var flashVersion = 0;　　 //flash版本
+    if (document.all) { // <=ie10
+        var swf = new ActiveXObject('ShockwaveFlash.ShockwaveFlash');
+        if (swf) {
+            hasFlash = 1;
+            VSwf = swf.GetVariable("$version");
+            flashVersion = parseInt(VSwf.split(" ")[1].split(",")[0]);
+        }
+    } else {
+        if (navigator.plugins && navigator.plugins.length > 0) {
+            var swf = navigator.plugins["Shockwave Flash"];
+            if (swf) {
+                hasFlash = 1;
+                var words = swf.description.split(" ");
+                for (var i = 0; i < words.length; ++i) {
+                    if (isNaN(parseInt(words[i]))) continue;
+                    flashVersion = parseInt(words[i]);
+                }
+            }
+        }
+    }
+    return {
+        f: hasFlash,
+        v: flashVersion
+    };
+}
+
+var fls = flashChecker();
+var div = document.createElement('div');
+div.innerHTML = '<div class="no-flash-tip"><a href="https://get.adobe.com/flashplayer" target="_blank">https://get.adobe.com/flashplayer<\/a><\/div>'
+if(!fls.f){
+  document.body.appendChild(div)
+}
