@@ -74,5 +74,17 @@ var swipeToClose = {
     if ( this.vendor === false ) return false;
     if ( this.vendor === '' ) return style;
     return this.vendor + style.charAt(0).toUpperCase() + style.substr(1);
+  },
+  init: function(options){
+    var that = this;
+    options = options || {};
+    this.threshold = options.threshold || this.threshold;
+    this.thresholdFromX = options.thresholdFromX || this.thresholdFromX;
+    
+    document.body.addEventListener('touchstart', function(event){ that.startTrack },false) 
+    document.body.addEventListener('touchmove', function(event){ that.moveTrack },false) 
+    document.body.addEventListener('touchend', function(event){ that.endTrack },false) 
+    document.body.addEventListener('touchcancel', function(event){ that.endTrack },false) 
+    
   }
 }
