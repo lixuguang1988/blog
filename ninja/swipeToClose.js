@@ -75,11 +75,20 @@ var swipeToClose = {
     if ( this.vendor === '' ) return style;
     return this.vendor + style.charAt(0).toUpperCase() + style.substr(1);
   },
+  reszieBody: function(){
+    var winHeight = window.innerHeight
+    if( winHeight > document.body.offsetHeight ){
+      document.body.style.maxHeight = winHeight +  'px'
+    }
+  },
   init: function(options){
     var that = this;
     options = options || {};
     this.threshold = options.threshold || this.threshold;
     this.thresholdFromX = options.thresholdFromX || this.thresholdFromX;
+    
+    this.resizeBody()
+    window.addEventListener('resize', this.resizeBody, false)
     
     document.body.addEventListener('touchstart', function(event){ that.startTrack },false) 
     document.body.addEventListener('touchmove', function(event){ that.moveTrack },false) 
