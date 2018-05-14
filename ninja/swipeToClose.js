@@ -40,7 +40,6 @@ var swipeToClose = {
       return false;
     }
 
-    console.log('我是左滑');
     this.updateElemPosition(0, 0);
     this.callBack && this.callBack();
   },
@@ -49,13 +48,16 @@ var swipeToClose = {
       return false;
     }
     for(var i = 0 ; i < this.trackElem.length; i++){
+      if(!this.trackElem[i]) { continue; }
       this.trackElem[i].style[this.prefixStyle('transform')] = 'translate(' + x  + 'px,' + y +'px)';
     }
   },
   cancelTrack: function(e){
     this.updateElemPosition(0, 0);
   },
-  callBack: null,
+  callBack: function(){
+    console.log('callback')
+  },
   vendor: function(){
     var vendors = ['t', 'webkitT', 'MozT', 'msT', 'OT'],
       _elementStyle = document.createElement('div').style,
@@ -75,7 +77,7 @@ var swipeToClose = {
     if ( this.vendor === '' ) return style;
     return this.vendor + style.charAt(0).toUpperCase() + style.substr(1);
   },
-  reszieBody: function(){
+  resizeBody: function(){
     var winHeight = window.innerHeight
     if( winHeight > document.body.offsetHeight ){
       document.body.style.maxHeight = winHeight +  'px'
@@ -86,14 +88,17 @@ var swipeToClose = {
     options = options || {};
     this.threshold = options.threshold || this.threshold;
     this.thresholdFromX = options.thresholdFromX || this.thresholdFromX;
+    this.callBack = options.callBack || this.callBack;
     
     this.resizeBody()
     window.addEventListener('resize', this.resizeBody, false)
     
-    document.body.addEventListener('touchstart', function(event){ that.startTrack },false) 
-    document.body.addEventListener('touchmove', function(event){ that.moveTrack },false) 
-    document.body.addEventListener('touchend', function(event){ that.endTrack },false) 
-    document.body.addEventListener('touchcancel', function(event){ that.endTrack },false) 
+    document.body.addEventListener('touchstart', function(event){ that.startTrack(event) },false) 
+    document.body.addEventListener('touchmove', function(event){ that.moveTrack(event) },false) 
+    document.body.addEventListener('touchend', function(event){ that.endTrack(event) },false) 
+    document.body.addEventListener('touchcancel', function(event){ that.endTrack(event) },false) 
     
   }
 }
+
+//swipeToClose.init({callBack: function(){ console.log('条用系统关闭webview方法');}})
