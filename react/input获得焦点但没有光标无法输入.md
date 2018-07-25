@@ -23,6 +23,7 @@
         <iframe ref={ node => this.contentIfr = node } src="/ueditor/index.html" frameBorder="none" width="100%" height="1000px" />
     </div>  
   ```
+  
   ```js
       componentDidMount(){
         const contentIfr = this.contentIfr
@@ -75,8 +76,10 @@
             allowFullScreen/>
         {/* <iframe ref={ node => this.contentIfr = node } src="/ueditor/index.html" frameBorder="none" width="100%" height="1000px" /> */}
     </div>
-    ```
-    ```js
+```
+    
+    
+```js
         componentDidMount(){
         // const contentIfr = this.contentIfr
         //const record = this.state.record
