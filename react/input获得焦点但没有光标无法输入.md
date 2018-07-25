@@ -25,7 +25,7 @@
   ```
   ```js
       componentDidMount(){
-        // const contentIfr = this.contentIfr
+        const contentIfr = this.contentIfr
         const record = this.state.record
         this._isMounted = true
         if(record){
@@ -79,7 +79,7 @@
     ```js
         componentDidMount(){
         // const contentIfr = this.contentIfr
-        const record = this.state.record
+        //const record = this.state.record
         this._isMounted = true
         // if(record){
         //     contentIfr.onload =  function(){
