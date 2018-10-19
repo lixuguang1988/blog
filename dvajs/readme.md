@@ -65,5 +65,18 @@ export default function request(url, options) {
 }
 ```
 
+# query-string ie 报错 
+> const xx = __webpack_require__('file')
+```bash
+# 移除 query-string node 版代码
+npm uninstall query-string --save
+# 安装 query-string 支持 create-react-app 版的代码
+npm install query-string@5 --save
+```
+> query-string 和 qs 的parse 
+> queryString.parse(location.search)  解析完整的search
+> qs.parse(location.search.slice(1))  需要手动去除 <code><b>?</b></code>
+
+
  
  
