@@ -21,3 +21,40 @@ import './index.css';
 import utils from './utils';
 Object.setPrototypeOf = require('setprototypeof');
 ```
+
+# token 过期问题
+
+> token失效，可以放到服务端判断。
+> 然后返回一个带失效状态的status，你在fetch中统一处理就好了
+> 例如：服务端返回455
+```js
+fetch(url).then(respones => {
+   if(respones.status === 455) {
+        throw new Error('455');
+   }
+}).then(/*正常的处理*/)
+```
+> 然后在index.js中使用onError钩子，获取到这一异常，直接dispatch到你的无权限页面就好了。
+>> 我在实现的时候发现onError 并不能捕获这个异常
+```js 
+# request.js
+import createHashHistory from 'history/createHashHistory';
+const history = createHashHistory()
+
+export default function request(url, options) {
+  return fetch(url, options)
+    .then(checkStatus)
+    .then(parseJSON)
+    .then(data => { 
+      if(data.ret === -99){
+        history.replace('/antd')
+        throw new Error('登录已过期,请重新登录！')
+      }
+      return { data } 
+    })
+    .catch(err => ({ err }));
+}
+```
+
+ 
+ 
