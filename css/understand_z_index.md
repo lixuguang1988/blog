@@ -1,0 +1,21 @@
+# 层叠顺序
+ * 层叠上下文的背景和边框
+ * z-index 为负的定位元素，负值越大越靠底
+ * 非定位的块级元素(no-positioned no-flow) div/table
+ * 非定位的浮动元素
+ * 非定位的行内元素
+ * z-index 等于0的定位元素
+ * z-index 大于0定位元素
+ > 子元素的层叠顺序在只在父级层叠上下文中有意义，子级层叠上下文被自动视为父级层叠上下文的一个独立单元。
+
+# 没有z-index的情况
+ * 层叠上下文的背景元素
+ * 非定位的块级元素
+ * 非定位的浮动元素
+ * 非定位的行内元素
+ * 定位元素
+ > 同级元素根据出现先后顺序
+ > 元素变成层叠上下文之后的 遵循定位元素
+
+# mdn understand z-index
+[mdn](https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Understanding_z_index)
