@@ -35,7 +35,7 @@ fetch(url).then(respones => {
 }).then(/*正常的处理*/)
 ```
 > 然后在index.js中使用onError钩子，获取到这一异常，直接dispatch到你的无权限页面就好了。
->> 我在实现的时候发现onError 并不能捕获这个异常
+>> 我在实现的时候发现onError 并不能捕获这个异常, 使用了如下方法
 ```js 
 # request.js
 import createHashHistory from 'history/createHashHistory';
