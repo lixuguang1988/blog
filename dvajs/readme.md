@@ -1,8 +1,8 @@
 # dvajs 快速上手
-[dvajs 上手](https://www.jianshu.com/p/c7b3b9c98d04)
+Paranoid_K 的简书文章 [dvajs 上手](https://www.jianshu.com/p/c7b3b9c98d04)
 
 # dvajs 如何配置懒加载的路由
-[使用 dva 如何配置异步加载路由组件  dva dynamic](https://www.jianshu.com/p/69694013e36b)
+静夜秋雨 的简书文章 [使用 dva 如何配置异步加载路由组件  dva dynamic](https://www.jianshu.com/p/69694013e36b)
 
 # dvajs 动态路由
 
