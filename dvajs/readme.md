@@ -1,3 +1,12 @@
+# dvajs 快速上手
+[dvajs 上手](https://www.jianshu.com/p/c7b3b9c98d04)
+
+# dvajs 如何配置懒加载的路由
+[使用 dva 如何配置异步加载路由组件  dva dynamic](https://www.jianshu.com/p/69694013e36b)
+
+# dvajs 动态路由
+
+
 # [dva,在IE9~10上的报错](https://github.com/dvajs/dva/issues/1717) 遇到跟这个同样的问题
 ```bash
 Warning: The component appears to have a render method, but doesn't extend React.Component. This is likely to cause errors. Change IndexPage to extend React.Component instead.
