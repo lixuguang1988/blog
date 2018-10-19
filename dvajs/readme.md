@@ -67,6 +67,7 @@ export default function request(url, options) {
 
 # query-string ie 报错 
 > const xx = __webpack_require__('file')
+[query-string 安装说明](https://www.npmjs.com/package/query-string#install)
 ```bash
 # 移除 query-string node 版代码
 npm uninstall query-string --save
