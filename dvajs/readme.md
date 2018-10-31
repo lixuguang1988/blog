@@ -78,6 +78,7 @@ npm install query-string@5 --save
 > queryString.parse(location.search)  解析完整的search  
 > qs.parse(location.search.slice(1))  需要手动去除 <code><b>?</b></code>  
 
-
+# dva + antd + mockjs 实现基础用户管理
+[dva + antd + mockjs 实现基础用户管理](http://www.cnblogs.com/besuccess/p/8074914.html)
  
  
