@@ -8,3 +8,9 @@
   # npmjs 源
   npm config set registry http://www.npmjs.org
  ```
+# 全局安装npm包
+ ```bash
+ npm install react-create-app -g
+ #
+ npm install react-create-app --global
+ ```
