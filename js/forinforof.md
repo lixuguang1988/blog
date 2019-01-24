@@ -1,6 +1,6 @@
-# for in 和 for of
+# for...in 和 for...of
 > for...in语句以任意顺序遍历一个对象的可枚举属性    
-> 遍历顺序 有数字，数字从小到大， 然后按插入顺序，先自身属性，后原型
+> 遍历顺序 有数字，数字从小到大， 然后按插入顺序，先自身属性，后原型  
 > for...of语句在可迭代对象（包括 Array，Map，Set，String，TypedArray，arguments 对象等等）上创建一个迭代循环，调用自定义迭代钩子，并为每个不同属性的值执行语句
 ```js
 const person = { hand: 2, foot: 2, head: 1 }
