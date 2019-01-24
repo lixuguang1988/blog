@@ -21,3 +21,15 @@
 #  z-index
 [mdn Understanding_z_index](https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Understanding_z_index)  
 [层叠上下文和层叠顺序](https://blog.csdn.net/destinytaoer/article/details/78400033)
+
+# 成为层叠上下文
+ * 根元素 html
+ * z-index 不为auto的定位元素(position: relative|absolute)
+ * opacity 不为0的元素
+ * position为fixed的定位元素
+ * transform 不为none的元素
+ * -wekibt-overflow-scrolling 的为touch的元素
+ * 设置了z-index，且不为auto的flex元素(父元素display:flex|inline-flex)
+ * 设置了filter值，且不是none的元素
+ * 设置了mix-blend-mode值，且不为normal的元素
+ * 设置了isolation，且为isolate的元素
