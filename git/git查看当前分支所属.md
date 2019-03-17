@@ -18,11 +18,11 @@ git branch
 
 4. 切换分支命令
 
-# 切换回master
+* 切换回master
 
 git checkout master
 
-# 切换换其它分支
+* 切换换其它分支
 
 git checkout xxx
 
